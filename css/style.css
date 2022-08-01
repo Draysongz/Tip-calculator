@@ -24,6 +24,7 @@ body{
     justify-content: space-between;
     width: 55%;
     height: 28vw;
+    margin-top: 3%;
 }
 #bill{
     background-color: var( --Very-light-grayish-cyan);
@@ -176,4 +177,6 @@ legend{
    border-radius: 5px;
    margin-top: 8px;
    color: black;
+   color:  var(--very-dark-cyan);
+   font-family: 'Space Mono', monospace;
 }
