@@ -9,15 +9,11 @@ body{
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
+    margin-top: 5%;
  
 }
 .main-head{
     text-align: center;
-}
-.right{
-   
-    color: var(--Strong-cyan);
-    border-radius: 12px;
 }
 .section2{
     display: flex;
@@ -63,6 +59,7 @@ button{
     font-weight: 700;
     color: white;
     margin-left: 3px;
+    cursor: pointer;
 
 }
 .per{
@@ -121,6 +118,8 @@ legend{
     height: 53vh;
     margin-top: 27px;
     margin-right: 10px;
+    color: var(--White);
+    border-radius: 12px;
 }
 .result{
     margin-top: 40px;
