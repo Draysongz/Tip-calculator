@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="section1">
+            <div class="header">
+                <h1 class="main-head">SPLI <br> TTER</h1>
+            </div>
+        </div>
+            <div class="section2">
+                <div class="left">
+                    <form action="" class="input-icons">
+                        <legend class="se">
+                           Bill
+                        </legend>
+                        <i class="fa-solid fa-dollar-sign sign"></i>
+                        <input type="text"placeholder="0" id="bill"/>
+                        <h4 class="select">
+                            Select Tip %
+                        </h4>
+                        <button class="per" type="button">5%</button>
+                        <button class="per" type="button">10%</button>
+                        <button class="per" type="button">15%</button>
+                        <br>
+                        <button class="second-b" type="button">25%</button>
+                        <button class="second-b"  type="button">50%</button>
+                        <button class="second-b" id="custom"  type="button">Custom</button>
+                        <h4 class="select">
+                            Number of People
+                        </h4>
+                        <span>
+                            <i class="fa fa-user icon sign"></i>
+                        <input type="text"placeholder="0" id="bills"/>
+                        <h4 class="select"
+                        </span>
+                    </form>
+                </div>
+               
+                 <!--right-div-->
+                 <div class="right">
+                    <form action="" class="result">
+                        <label for="amount">Tip Amount <span class="person">
+                            / person
+                           </span ></label>
+                           <input type="text" id="amount">
+                           <label for="total-amount">Tip Amount <span class="person">
+                            / person
+                           </span ></label>
+                           <input type="text" id="total-amount">
+                           <button id="reset" type="button">RESET</button>
+                    </form>
+                  
+                 </div>
+
+            </div>
+    
+           
+        </div>
+        
+    </div>
+</body>
+</html>
