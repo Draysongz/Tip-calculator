@@ -8,30 +8,39 @@ var reset = document.querySelector('#reset')
 amount_display.value = "$0.00";
 totalAmountDisplay.value = "$0.00";
 
-//  if (persons.value == 0) {
-//      var warnDisplay = document.querySelector('.warn')
-//      warnDisplay.value = `can't be zero `;
-//  } else {
-//      warnDisplay.classList.add('disabled')
-//      console.log(warnDisplay)
-//  }
+var personInput= persons.value
+           
+
 buttons.forEach((e) => {
     e.addEventListener('click', () => {
         e.classList.toggle('clicked')
         persons.addEventListener('input', () => {
-
-            let billValue = bill.value
+             if (personInput==0){
+                document.querySelector('.warn').value=`can't be zero `;
+            }
+            
+        })
+        persons.addEventListener('input', () => {
+            
+            var billValue = bill.value
             console.log(billValue)
             var eValue = e.value
-            let multipliedAnswer = ((billValue * eValue / 100));
-            let personsValue = persons.value
-            let amount = (multipliedAnswer / personsValue);
-            let amountDisplay = amount_display;
+            var multipliedAnswer = ((billValue * eValue / 100));
+            var personsValue = persons.value
+            if(personsValue== 0){
+                amountDisplay.value = "$0.00";
+                tipTotal.value = "$0.00";
+            }
+            var amount = (multipliedAnswer / personsValue);
+            var amountDisplay = amount_display;
             amountDisplay.value = `$${amount}`
-            let tipTotal = totalAmountDisplay
+            var tipTotal = totalAmountDisplay
             tipTotal.value = `$${multipliedAnswer}`
-            var filled= persons.value
            
+           
+    
+            var filled= persons.value
+            document.querySelector('.warn').classList.add("disabled")
             reset.addEventListener('click', () => {
                bill.value = "";
                persons.value = "";
@@ -39,13 +48,23 @@ buttons.forEach((e) => {
                totalAmountDisplay.value = "$0.00";
                e.classList.remove("clicked")
                reset.disabled=true
+               if (personInput=0){
+                document.querySelector('.warn').value=`can't be zero `;
+               }
+
+
                
            })
            if (filled==""){
                reset.disabled=true
-            }else{
+           }else if(filled <=0){
+            reset.disabled=true
+           }
+            else{
                reset.disabled=false
             }
+
+            
         })
     })
 

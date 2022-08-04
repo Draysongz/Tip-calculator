@@ -16,7 +16,9 @@
         margin-top: 10px;
         word-spacing: 3px;
     }
-    
+    .disabled{
+        display: none;
+    }
     .warning {
         display: flex;
         flex-direction: row;
